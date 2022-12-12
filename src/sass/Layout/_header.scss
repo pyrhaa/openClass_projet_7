@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  &__logo {
+    width: 110px;
+  }
+  &__nav {
+    &__link {
+      color: $primary;
+      font-size: 12px;
+      margin-left: 10px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.active {
+  text-decoration: underline;
+}
