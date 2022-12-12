@@ -1,15 +1,14 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
+import Footer from './Components/Footer/Footer';
+import Navbar from './Components/Navbar/Navbar';
 import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0);
-
+const App = () => {
   return (
-    <div className="App">
-      <p className="read-the-docs">Bonjour</p>
-    </div>
+    <>
+      <Navbar className="homepage"></Navbar>
+      <Footer className="footer" />
+    </>
   );
-}
+};
 
 export default App;
