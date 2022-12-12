@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-// import Home from
-// import About from
-// import Rental from
-// import Error from
+import Home from '../Pages/Home';
+import About from '../Pages/About';
+import Rental from '../Pages/Rental';
+import Error from '../Pages/Error';
 
 const Router = () => {
   return (
