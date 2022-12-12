@@ -4,11 +4,11 @@ import About from '../Pages/About';
 import Rental from '../Pages/Rental';
 import Error from '../Pages/Error';
 
-const Router = () => {
+const Router = ({ switcher }) => {
   return (
     <Routes>
       <Route path="/" element={<Home />}></Route>
-      <Route path="/about" element={<About />}></Route>
+      <Route path="/about" element={<About switcher={switcher} />}></Route>
       <Route path="/rental/:id" element={<Rental />}></Route>
       <Route path="*" element={<Error />}></Route>
     </Routes>

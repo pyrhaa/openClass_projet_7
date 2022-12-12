@@ -85,4 +85,14 @@
   margin-top: 30px;
 }
 
+.about {
+  margin: 10px;
+  min-height: 90vh;
+}
+.about__guidelines {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+
 /*# sourceMappingURL=index.css.map */

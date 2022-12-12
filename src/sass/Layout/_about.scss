@@ -1,0 +1,9 @@
+.about {
+  margin: 10px;
+  min-height: 90vh;
+  &__guidelines {
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+  }
+}
