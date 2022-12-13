@@ -495,10 +495,15 @@ html {
 }
 .footer__desc {
   color: white;
-  font-size: 12px;
+  font-size: 24px;
   margin-top: 30px;
 }
 
+@media screen and (min-width: 375px) {
+  .footer__desc {
+    font-size: 12px;
+  }
+}
 .navbar {
   display: flex;
   align-items: center;
