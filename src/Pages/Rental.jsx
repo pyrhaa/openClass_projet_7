@@ -3,6 +3,7 @@ import Dropdown from '../Components/Dropdown';
 import Error from './Error';
 import RentalHost from '../Components/RentalBlocs/RentalHost';
 import RentalRatings from '../Components/RentalBlocs/RentalRatings';
+import RentalTags from '../Components/RentalBlocs/RentalTags';
 import getData from '../data/data.json';
 
 const Rental = () => {
@@ -15,6 +16,9 @@ const Rental = () => {
     <div className="rental">
       <Carrousel pictures={rental.pictures}></Carrousel>
       <div className="rental__wrapper">
+        <div className="rental__informations">
+          <RentalTags tags={rental.tags} />
+        </div>
         <div className="rental__host">
           <RentalRatings ratings={rental.rating} />
           <RentalHost host={rental.host} />
