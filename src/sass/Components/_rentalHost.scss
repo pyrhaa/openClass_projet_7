@@ -15,3 +15,16 @@
     text-align: right;
   }
 }
+
+@media screen and (min-width: $mediumdevices) {
+  .host {
+    max-width: none;
+    &__img {
+      height: 64px;
+      width: 64px;
+    }
+    &__name {
+      font-size: 18px;
+    }
+  }
+}

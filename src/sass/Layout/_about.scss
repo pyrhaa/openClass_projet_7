@@ -7,3 +7,15 @@
     margin-top: 20px;
   }
 }
+
+@media screen and (min-width: $mediumdevices) {
+  .about {
+    padding: 10px;
+    max-width: 1080px;
+    margin: auto;
+    &__guidelines {
+      max-width: 900px;
+      margin: 30px auto;
+    }
+  }
+}

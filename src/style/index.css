@@ -50,41 +50,117 @@
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
   }
 }
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.homepage {
+  padding: 10px;
+}
+
+.rental__section {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+@media screen and (min-width: 768px) {
+  .homepage {
+    max-width: 1080px;
+    margin: auto;
+  }
+  .rental__section {
+    background: #f7f7f7;
+    border-radius: 10px;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .rental__section {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 50px;
+  }
+}
+.rental {
   margin: 10px;
+  min-height: 90vh;
 }
-.navbar__logo {
-  width: 110px;
+.rental__informations {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
-.navbar__nav__link {
-  color: #ff6060;
-  font-size: 12px;
-  margin-left: 10px;
-  text-decoration: none;
-  text-transform: uppercase;
+.rental__host {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.rental__details {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
 }
 
-.active {
-  text-decoration: underline;
+@media screen and (min-width: 768px) {
+  .rental {
+    max-width: 1080px;
+    margin: auto;
+    padding: 10px;
+  }
+  .rental__host {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+  .rental__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .rental__details {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
-.footer {
-  background: black;
-  height: 209px;
+@media screen and (min-width: 992px) {
+  .rental__details {
+    gap: 70px;
+  }
+}
+.error {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  min-height: 80vh;
+  text-align: center;
 }
-.footer__desc {
-  color: white;
-  font-size: 12px;
-  margin-top: 30px;
+.error__title {
+  color: #ff6060;
+  font-size: 96px;
+  font-weight: 700;
+}
+.error__description {
+  color: #ff6060;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 11px;
+  padding: 0 58px;
+}
+.error__btn {
+  background: transparent;
+  border: none;
+  color: #ff6060;
+  font-size: 14px;
+  margin-top: 133px;
+  text-decoration: underline;
 }
 
+@media screen and (min-width: 992px) {
+  .error__title {
+    font-size: 288px;
+  }
+  .error__description {
+    font-size: 36px;
+  }
+}
 .about {
   margin: 10px;
   min-height: 90vh;
@@ -95,6 +171,17 @@
   margin-top: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .about {
+    padding: 10px;
+    max-width: 1080px;
+    margin: auto;
+  }
+  .about__guidelines {
+    max-width: 900px;
+    margin: 30px auto;
+  }
+}
 .container {
   margin: 0;
   position: relative;
@@ -139,6 +226,11 @@
   height: 20px;
 }
 
+@media screen and (min-width: 992px) {
+  .carrousel__img {
+    height: 450px;
+  }
+}
 .drop {
   width: 100%;
 }
@@ -189,6 +281,23 @@
   transition: height 500ms ease-in, opacity 300ms ease-in;
 }
 
+@media screen and (min-width: 768px) {
+  .collapse__visible {
+    border-radius: 10px;
+    height: 52px;
+  }
+  .collapse__visible__title {
+    font-size: 18px;
+  }
+  .collapse__visible__chevron {
+    width: 25px;
+  }
+  .collapse__toggle__content {
+    font-size: 18px;
+    line-height: 30.67px;
+    text-align: justify;
+  }
+}
 .herobanner,
 .herobanner__about {
   background-position: center;
@@ -217,6 +326,49 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/img-2.png");
 }
 
+@media screen and (min-width: 768px) {
+  .herobanner,
+  .herobanner__about {
+    height: 223px;
+    justify-content: center;
+  }
+  .herobanner__title,
+  .herobanner__about__title {
+    font-size: 48px;
+  }
+}
+.rentalcard {
+  border-radius: 10px;
+  height: 255px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.rentalcard:hover {
+  -webkit-animation: shadow-drop-2-center 0.8s ease-in-out both;
+  animation: shadow-drop-2-center 0.8s ease-in-out both;
+}
+.rentalcard__title {
+  bottom: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  left: 19.71px;
+  position: absolute;
+  color: white;
+}
+.rentalcard__img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.rentalcard__overlay {
+  -moz-box-shadow: -1px -81px 84px -37px rgb(0, 0, 0) inset;
+  -webkit-box-shadow: -1px -81px 84px -37px rgb(0, 0, 0) inset;
+  box-shadow: -1px -81px 84px -37px rgb(0, 0, 0) inset;
+  inset: 0;
+  position: absolute;
+}
+
 .host {
   display: flex;
   align-items: center;
@@ -235,6 +387,18 @@
   text-align: right;
 }
 
+@media screen and (min-width: 768px) {
+  .host {
+    max-width: none;
+  }
+  .host__img {
+    height: 64px;
+    width: 64px;
+  }
+  .host__name {
+    font-size: 18px;
+  }
+}
 .star {
   height: 23px;
   width: 23px;
@@ -244,6 +408,17 @@
   width: 450px;
 }
 
+@media screen and (min-width: 768px) {
+  .stars {
+    margin-top: 10px;
+    width: 190px;
+  }
+  .star {
+    height: 32px;
+    margin: 0 3px;
+    width: 32px;
+  }
+}
 .tags {
   display: flex;
   flex-direction: row;
@@ -266,6 +441,15 @@
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .tag {
+    border-radius: 15px;
+    font-size: 14px;
+    margin-top: 20px;
+    min-width: 115px;
+    padding: 8px 15px;
+  }
+}
 .title {
   color: #ff6060;
   font-size: 18px;
@@ -279,6 +463,63 @@
   text-align: left;
   font-size: 14px;
   font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 36px;
+    line-height: 51.34px;
+    max-width: 70%;
+  }
+  .location {
+    font-size: 18px;
+  }
+}
+.footer {
+  background: black;
+  height: 209px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__desc {
+  color: white;
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+.navbar__logo {
+  width: 110px;
+}
+.navbar__nav__link {
+  color: #ff6060;
+  font-size: 12px;
+  margin-left: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    max-width: 1080px;
+    margin: auto;
+    padding: 5px 20px;
+  }
+  .navbar__nav__link {
+    text-transform: capitalize;
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -48,3 +48,25 @@
   opacity: 1;
   transition: height 500ms ease-in, opacity 300ms ease-in;
 }
+
+@media screen and (min-width: $mediumdevices) {
+  .collapse {
+    &__visible {
+      border-radius: 10px;
+      height: 52px;
+      &__title {
+        font-size: 18px;
+      }
+      &__chevron {
+        width: 25px;
+      }
+    }
+    &__toggle {
+      &__content {
+        font-size: 18px;
+        line-height: 30.67px;
+        text-align: justify;
+      }
+    }
+  }
+}

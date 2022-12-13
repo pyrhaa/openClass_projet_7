@@ -40,3 +40,9 @@
   cursor: pointer;
   height: 20px;
 }
+
+@media screen and (min-width: $largedevices) {
+  .carrousel__img {
+    height: 450px;
+  }
+}
