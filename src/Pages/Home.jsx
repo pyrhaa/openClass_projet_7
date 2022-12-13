@@ -1,4 +1,4 @@
-import getData from '../data/getData';
+import getData from '../data/data.json';
 import Hero from '../Components/Hero';
 import RentalCard from '../Components/RentalCard';
 import { useEffect, useState } from 'react';
@@ -7,7 +7,7 @@ const Home = () => {
   const [rentalList, setRentalList] = useState([]);
 
   useEffect(() => {
-    setRentalList([...getData()]);
+    setRentalList([...getData]);
   }, []);
 
   return (

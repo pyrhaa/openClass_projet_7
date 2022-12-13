@@ -1,6 +1,7 @@
 import Carrousel from '../Components/Caroussel';
 import Dropdown from '../Components/Dropdown';
 import Error from './Error';
+import RentalHost from '../Components/RentalBlocs/RentalHost';
 import getData from '../data/data.json';
 
 const Rental = () => {
@@ -12,6 +13,11 @@ const Rental = () => {
   return (
     <div className="rental">
       <Carrousel pictures={rental.pictures}></Carrousel>
+      <div className="rental__wrapper">
+        <div className="rental__informations">
+          <RentalHost host={rental.host} />
+        </div>
+      </div>
       <div className="rental__details">
         <Dropdown title="Équipements" content={rental.equipments}></Dropdown>
         <Dropdown title="Description" content={rental.description}></Dropdown>

@@ -1,0 +1,17 @@
+.host {
+  display: flex;
+  align-items: center;
+  max-width: 120px;
+  &__img {
+    border-radius: 50%;
+    height: 32px;
+    margin-left: 10px;
+    width: 32px;
+  }
+  &__name {
+    color: $primary;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: right;
+  }
+}

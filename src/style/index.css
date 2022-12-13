@@ -217,4 +217,22 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/img-2.png");
 }
 
+.host {
+  display: flex;
+  align-items: center;
+  max-width: 120px;
+}
+.host__img {
+  border-radius: 50%;
+  height: 32px;
+  margin-left: 10px;
+  width: 32px;
+}
+.host__name {
+  color: #ff6060;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: right;
+}
+
 /*# sourceMappingURL=index.css.map */
