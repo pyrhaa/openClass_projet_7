@@ -1,18 +1,11 @@
-import { useState } from 'react';
 import about from '../data/about.json';
-// import Hero from '../Components/Hero';
+import Hero from '../Components/Hero';
 import Dropdown from '../Components/Dropdown';
 
 const About = () => {
-  const [switchban, setSwitchban] = useState('');
-
-  const switcher = (choice) => {
-    setSwitchban(choice);
-    return switchban;
-  };
   return (
     <div className="about">
-      {/* <Hero origin="about" switcher={switcher('about')}></Hero> */}
+      <Hero origin="about"></Hero>
       <section className="about__guidelines">
         {about.map((el) => {
           return (

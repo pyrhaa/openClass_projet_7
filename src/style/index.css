@@ -95,4 +95,126 @@
   margin-top: 20px;
 }
 
+.container {
+  margin: 0;
+  position: relative;
+}
+
+.carrousel {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+.carrousel__navigation {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.carrousel__img {
+  border-radius: 10px;
+  height: 225px;
+  object-fit: cover;
+  user-select: none;
+  width: 100%;
+}
+.carrousel__legend {
+  bottom: 10px;
+  color: white;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.hide-img {
+  display: none;
+}
+
+.chevron {
+  cursor: pointer;
+  height: 20px;
+}
+
+.drop {
+  width: 100%;
+}
+.drop__visible {
+  align-items: center;
+  background: #ff6060;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  height: 29.93px;
+  justify-content: space-between;
+  padding: 0px 13px;
+}
+.drop__visible__title {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+.drop__visible__chevron {
+  transition: all 0.4s ease-in-out;
+  width: 13px;
+}
+.drop__toggle {
+  background: #f7f7f7;
+  border-radius: 0 0 10px 10px;
+  color: #ff6060;
+  font-size: 12px;
+  font-weight: 300;
+  height: auto;
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+}
+.drop__toggle__content {
+  line-height: 17.11px;
+  margin: 0;
+  padding: 15px;
+  pointer-events: none;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.animated {
+  opacity: 1;
+  transition: height 500ms ease-in, opacity 300ms ease-in;
+}
+
+.herobanner,
+.herobanner__about {
+  background-position: center;
+  background-size: cover;
+  border-collapse: separate;
+  border-radius: 10px;
+  display: flex;
+  height: 111px;
+  align-items: center;
+}
+.herobanner__title,
+.herobanner__about__title {
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 16px;
+}
+
+.herobanner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/img-1.png");
+}
+
+.herobanner__about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/img-2.png");
+}
+
 /*# sourceMappingURL=index.css.map */
