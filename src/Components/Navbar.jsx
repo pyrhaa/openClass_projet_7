@@ -3,7 +3,7 @@ import { ReactComponent as Logo } from '../assets/logos/NavbarLogo.svg';
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="navbar">
       <Logo className="navbar__logo"></Logo>
       <nav className="navbar__nav">
         <NavLink
