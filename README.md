@@ -38,10 +38,10 @@ Start the server
 
 ## Color Reference
 
-| Color     | Hex                                                              |
-| --------- | ---------------------------------------------------------------- |
-| Primary   | ![#FF6060](https://via.placeholder.com/10/FF6060?text=+) #FF6060 |
-| Lightgrey | ![#F7F7F7](https://via.placeholder.com/10/F7F7F7?text=+) #F7F7F7 |
+| Color     | Hex     |
+| --------- | ------- |
+| Primary   | #FF6060 |
+| Secondary | #F7F7F7 |
 
 ## License
 
