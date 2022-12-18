@@ -32,43 +32,67 @@ const Carrousel = (props) => {
     setCurrentSlide(newSlide);
   };
 
-  return (
-    <div className="container">
-      <div className="carrousel">
-        <div className="carrousel__navigation">
-          <ChevronLeft
-            className="chevron"
-            onClick={() => {
-              prevSlide();
-            }}
-          />
+  if (props.pictures.length > 1) {
+    return (
+      <div className="container">
+        <div className="carrousel">
+          <div className="carrousel__navigation">
+            <ChevronLeft
+              className="chevron"
+              onClick={() => {
+                prevSlide();
+              }}
+            />
 
-          <ChevronRight
-            className="chevron"
-            onClick={() => {
-              nextSlide();
-            }}
-          />
+            <ChevronRight
+              className="chevron"
+              onClick={() => {
+                nextSlide();
+              }}
+            />
+          </div>
+
+          {props.pictures.map((picture, index) => {
+            return (
+              <img
+                alt=""
+                src={picture}
+                key={index}
+                className={
+                  index === currentSlide ? 'carrousel__img' : 'hide-img'
+                }></img>
+            );
+          })}
+
+          <span className="carrousel__legend">
+            {currentSlide + 1}/{props.pictures.length}
+          </span>
         </div>
-
-        {props.pictures.map((picture, index) => {
-          return (
-            <img
-              alt=""
-              src={picture}
-              key={index}
-              className={
-                index === currentSlide ? 'carrousel__img' : 'hide-img'
-              }></img>
-          );
-        })}
-
-        <span className="carrousel__legend">
-          {currentSlide + 1}/{props.pictures.length}
-        </span>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="container">
+        <div className="carrousel">
+          {props.pictures.map((picture, index) => {
+            return (
+              <img
+                alt=""
+                src={picture}
+                key={index}
+                className={
+                  index === currentSlide ? 'carrousel__img' : 'hide-img'
+                }></img>
+            );
+          })}
+
+          <span className="carrousel__legend">
+            {currentSlide + 1}/{props.pictures.length}
+          </span>
+        </div>
+      </div>
+    );
+  }
 };
 
 export default Carrousel;
